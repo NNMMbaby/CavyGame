@@ -230,7 +230,7 @@ class DownloadWithProgressButton: DownloadButton {
         
         downPress = UILabel(frame: self.bounds)
         
-        downPress.textColor = UIColor(hexString:"#3e76db")
+        downPress.textColor = Common.TitleBarColor
         downPress.textAlignment = NSTextAlignment.Center
         self.addSubview(downPress)
     }

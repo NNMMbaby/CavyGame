@@ -22,9 +22,9 @@ class GameInfoDownloadBtn: DownloadWithProgressButton {
     override func setButtonImageStatus(status : Int) {
         
         
-        self.setBackgroundImage(self.buttonImageFromColor(UIColor(hexString: "568ae8")), forState: UIControlState.Normal)
+        self.setBackgroundImage(self.buttonImageFromColor(UIColor(hexString: "f465c3")), forState: UIControlState.Normal)
         
-        self.setBackgroundImage(self.buttonImageFromColor(UIColor(hexString: "3e76db")), forState: UIControlState.Highlighted)
+        self.setBackgroundImage(self.buttonImageFromColor(Common.TitleBarColor), forState: UIControlState.Highlighted)
 
         
         return

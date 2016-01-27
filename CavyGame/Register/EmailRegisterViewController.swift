@@ -47,7 +47,7 @@ class EmailRegisterViewController: UserLogin {
         codeText.delegate = self
         registerBtn.layer.masksToBounds = true
         registerBtn.layer.cornerRadius = Common.btnCornerRadius
-        registerBtn.setBackgroundCoclor(UIColor(hexString: "3e76db"), forState: UIControlState.Highlighted)
+        registerBtn.setBackgroundCoclor(Common.TitleBarColor, forState: UIControlState.Highlighted)
         
         var tap = UITapGestureRecognizer(target: self, action: "onClickCodeImage:")
         imageCode!.addGestureRecognizer(tap)

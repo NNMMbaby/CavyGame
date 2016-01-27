@@ -16,8 +16,11 @@ class ClassificationViewController: UIViewController, ClassificationCellProtocol
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        classTableView.tableFooterView = UIView()
-        classTableView.tableHeaderView = UIView()
+        let view = UIView()
+        view.backgroundColor = UIColor.clearColor()
+        
+        classTableView.tableFooterView = view
+        classTableView.tableHeaderView = view
         MJRefreshAdapter.setupRefreshHeader(classTableView, target: self, action: "loadData")
         loadData()
         
@@ -123,14 +126,14 @@ extension ClassificationViewController {
     }
     
     /**
-    设置 footer section高度
+    设置 Header section高度
     
     - parameter tableView: table
     - parameter section:   section 索引
     
     - returns: 高度
     */
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 5
     }
     
@@ -147,14 +150,14 @@ extension ClassificationViewController {
     }
     
     /**
-    创建footer
+    创建Header
     
     - parameter tableView: table
     - parameter section:   索引
     
     - returns: 视图
     */
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let view = UIView()
         
@@ -208,6 +211,23 @@ extension ClassificationViewController {
         
         tagClassView.gameTagID = "\(tagView.tag)"
         self.navigationController?.pushViewController(tagClassView, animated: true)
+        
+    }
+    
+    /**
+    用于消除Header section 随tableView 移动的黏性
+    
+    - parameter scrollView: 
+    */
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        var sectionHeaderHeight: CGFloat = 5
+        
+        if scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y >= 0{
+            scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0)
+        } else if scrollView.contentOffset.y >= sectionHeaderHeight {
+            scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0)
+        }
         
     }
     

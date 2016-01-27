@@ -85,7 +85,7 @@ class AppInfoViewController: UIViewController, UIAlertViewDelegate {
         kbText?.delegate = self
         kbText?.textField?.placeholder = Common.LocalizedStringForKey("reviewplaceholder")
         kbText?.button?.setTitle(Common.LocalizedStringForKey("sendBtn"), forState: UIControlState.Normal)
-        kbText?.button?.setTitleColor(UIColor(hexString: "568ae8"), forState: UIControlState.Normal)
+        kbText?.button?.setTitleColor(UIColor(hexString: "f465c3"), forState: UIControlState.Normal)
         
         dimBackground.addSubview(kbText!)
         

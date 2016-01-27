@@ -46,15 +46,17 @@ blue:(b)/255.0f alpha:1.0f]
     btnStd = status;
     
     switch (status) {
+            // 原：#3e76db:0x3e, 0x76, 0xdb   #ee48b5 :0xee, 0x48, 0xb5
+            // 原：#568ae8:0x56, 0x8a, 0xe8   #f465c3 :0xf4, 0x65, 0xc3
+            
         case STATUS_Down:{//下载
-            self.layer.borderColor = RGBCOLOR(0x3e, 0x76, 0xdb).CGColor;
+            self.layer.borderColor = RGBCOLOR(0xee, 0x48, 0xb5).CGColor;
             self.layer.borderWidth = 1;
-            // 0x56, 0x8a, 0xe8
-            [self setTitleColor:RGBCOLOR(0x3e, 0x76, 0xdb) forState:UIControlStateNormal];
+            [self setTitleColor:RGBCOLOR(0xee, 0x48, 0xb5) forState:UIControlStateNormal];
             [self setTitleColor:RGBCOLOR(0xff, 0xff, 0xff) forState:UIControlStateHighlighted];
             
             [self setBackgroundImage:[self buttonImageFromColor:RGBCOLOR(0xff, 0xff, 0xff)] forState:UIControlStateNormal];
-            [self setBackgroundImage:[self buttonImageFromColor:RGBCOLOR(0x3e, 0x76, 0xdb)] forState:UIControlStateHighlighted];
+            [self setBackgroundImage:[self buttonImageFromColor:RGBCOLOR(0xee, 0x48, 0xb5)] forState:UIControlStateHighlighted];
 
         }
             break;
@@ -66,8 +68,8 @@ blue:(b)/255.0f alpha:1.0f]
             [self setTitleColor:RGBCOLOR(0xff, 0xff, 0xff) forState:UIControlStateNormal];
             [self setTitleColor:RGBCOLOR(0xff, 0xff, 0xff) forState:UIControlStateHighlighted];
             
-            [self setBackgroundImage:[self buttonImageFromColor:RGBCOLOR(0x56, 0x8a, 0xe8)] forState:UIControlStateNormal];
-            [self setBackgroundImage:[self buttonImageFromColor:RGBCOLOR(0x3e, 0x76, 0xdb)] forState:UIControlStateHighlighted];
+            [self setBackgroundImage:[self buttonImageFromColor:RGBCOLOR(0xf4, 0x65, 0xc3)] forState:UIControlStateNormal];
+            [self setBackgroundImage:[self buttonImageFromColor:RGBCOLOR(0xee, 0x48, 0xb5)] forState:UIControlStateHighlighted];
         }
             break;
             

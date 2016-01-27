@@ -114,7 +114,7 @@ class RankingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             perListButton.titleLabel?.font = UIFont.systemFontOfSize(14)
             
             if i == 0 {
-                perListButton.setTitleColor(UIColor(hexString: "#3e76db"), forState: UIControlState.Normal)
+                perListButton.setTitleColor(Common.TitleBarColor, forState: UIControlState.Normal)
             }else{
                 perListButton.setTitleColor(UIColor(hexString: "#868686"), forState: UIControlState.Normal)
             }
@@ -176,7 +176,7 @@ class RankingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         var btn = rankListView.viewWithTag(1000 + currentIndex) as! UIButton
         
-        btn.setTitleColor(UIColor(hexString: "#3e76db"), forState: UIControlState.Normal)
+        btn.setTitleColor(Common.TitleBarColor, forState: UIControlState.Normal)
         
     }
     

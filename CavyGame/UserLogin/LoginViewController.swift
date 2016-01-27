@@ -30,7 +30,7 @@ class LoginViewController: UserLogin {
         self.title = Common.LocalizedStringForKey("loginView_title")
         loginBtn.layer.masksToBounds = true
         loginBtn.layer.cornerRadius = Common.btnCornerRadius
-        loginBtn.setBackgroundCoclor(UIColor(hexString: "3e76db"), forState: UIControlState.Highlighted)
+        loginBtn.setBackgroundCoclor(Common.TitleBarColor, forState: UIControlState.Highlighted)
         
         savePasswordLabel.text = Common.LocalizedStringForKey("loginsavepwd_label")
         loginBtn.setTitle(Common.LocalizedStringForKey("login_view_btn"), forState: UIControlState.allZeros)

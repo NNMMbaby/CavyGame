@@ -37,7 +37,7 @@ class FoundPasswordEmailViewController: UIViewController {
         emailText.delegate = self
         finishBtn.layer.masksToBounds = true
         finishBtn.layer.cornerRadius = Common.btnCornerRadius
-        finishBtn.setBackgroundCoclor(UIColor(hexString: "3e76db"), forState: UIControlState.Highlighted)
+        finishBtn.setBackgroundCoclor(Common.TitleBarColor, forState: UIControlState.Highlighted)
         
         codeImage.setWebImage(serverAddr + "authority/imageCode?codekey=1", network: true)
         

@@ -86,7 +86,7 @@ struct Common {
     
     static let cellSetHighlightedBkColor = UIColor(hexString: "#d0d0d0") // 通用的背景
     static let tableBackColor = UIColor(hexString: "#eeeeee") // 通用的背景
-    static let TitleBarColor = UIColor(hexString : "#3e76db") // titlebar颜色
+    static let TitleBarColor = UIColor(hexString : "#ee48b5") // titlebar颜色
     static let currentPageIndicatorTintColor = UIColor(hexString : "#ffffff") // pagecontrol当前页颜色
     static let pageIndicatorTintColor = UIColor(hexString : "#8284a3") // pagecontrol其它页颜色
     

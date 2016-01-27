@@ -52,7 +52,7 @@ class RegisterViewController: UserLogin {
         authCodeTxt.delegate = self
         registerBtn.layer.masksToBounds = true
         registerBtn.layer.cornerRadius = Common.btnCornerRadius
-        registerBtn.setBackgroundCoclor(UIColor(hexString: "3e76db"), forState: UIControlState.Highlighted)
+        registerBtn.setBackgroundCoclor(Common.TitleBarColor, forState: UIControlState.Highlighted)
         
         registerSubView.layer.borderWidth = 0.6
         registerSubView.layer.borderColor = UIColor(hexString: "DEDEDF")?.CGColor
