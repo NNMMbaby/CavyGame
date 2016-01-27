@@ -12,6 +12,16 @@ class RankingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let screenRect     = UIScreen.mainScreen().bounds
 
+    var rankListHeight :CGFloat {
+        
+        if resolution() == .UIDeviceResolution_iPhoneRetina4 {
+            return 30
+        } else {
+            return 40
+        }
+        
+    }
+    
     var rankListView   = UIView()
     var rankListArray  = Array<RankList>()
     var perListWidth   = CGFloat()
@@ -33,7 +43,7 @@ class RankingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     */
     func addScrollerViewWithTableView(){
         
-        var cutHight: CGFloat = 64 + 30
+        var cutHight: CGFloat = 64 + rankListHeight
         
         if .UIDeviceResolution_iPhoneRetina4 == resolution() {
             
@@ -43,7 +53,7 @@ class RankingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             cutHight += 49 // tab的总体高度 48 ＋ 1
         }
-        self.scrollView = UIScrollView(frame:CGRectMake(0, 30, screenRect.width, screenRect.height - cutHight))
+        self.scrollView = UIScrollView(frame:CGRectMake(0, rankListHeight, screenRect.width, screenRect.height - cutHight))
         self.scrollView.contentSize = CGSizeMake(screenRect.width * CGFloat(self.listCount), screenRect.height - cutHight)
         self.scrollView.scrollEnabled = false   // 关闭滑动翻页
         for var i = 0 ; i < self.listCount ; i++ {
@@ -66,11 +76,6 @@ class RankingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             
             rankTableView.backgroundColor = Common.tableBackColor
-            
-            var leftBtn = UIBarButtonItem(image: UIImage(named: "icon_back"), style: UIBarButtonItemStyle.Bordered, target: self, action: Selector("onClickBack"))
-            leftBtn.imageInsets = UIEdgeInsetsMake(0, -5, 0, -5)
-            
-            self.navigationItem.leftBarButtonItem = leftBtn
             
             rankTableView.separatorInset = UIEdgeInsetsZero
             
@@ -98,9 +103,16 @@ class RankingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     */
     func addRankListView(){
         
-        self.rankListView = UIView(frame: CGRectMake(0, 0, screenRect.width, 30))
-        rankListView.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 30)
-        rankListView.backgroundColor = UIColor.clearColor()
+        self.rankListView = UIView(frame: CGRectMake(0, 0, screenRect.width, rankListHeight))
+        rankListView.backgroundColor = UIColor(hexString: "#f1f1f1")
+        
+        let lineView = UIView()
+        lineView.backgroundColor = UIColor(hexString: "#dedede")
+        rankListView.addSubview(lineView)
+        lineView.snp_makeConstraints { (make) -> Void in
+            make.height.equalTo(0.3)
+            make.left.right.bottom.equalTo(self.rankListView)
+        }
         
         self.perListWidth = UIScreen.mainScreen().bounds.width / CGFloat(self.listCount)
         
@@ -110,7 +122,7 @@ class RankingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             perListButton.titleLabel?.textAlignment = NSTextAlignment.Center
             perListButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-            perListButton.frame = CGRectMake(perListWidth * CGFloat(i), 0, perListWidth, 30)
+            perListButton.frame = CGRectMake(perListWidth * CGFloat(i), 0, perListWidth, rankListHeight - 0.3)
             perListButton.titleLabel?.font = UIFont.systemFontOfSize(14)
             
             if i == 0 {
@@ -203,14 +215,14 @@ class RankingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if rankListArray.isEmpty {
             return 0
         }
-        let rankTableView = scrollView.viewWithTag(2000 + currentIndex) as! RankTableView
+        let rankTableView = tableView as! RankTableView
         
         return rankTableView.gameListInfo.gameList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-        let rankTableView = scrollView.viewWithTag(2000 + currentIndex) as! RankTableView
+        let rankTableView = tableView as! RankTableView
         
         var cell = rankTableView.dequeueReusableCellWithIdentifier("GameInfoTableViewCellid", forIndexPath: indexPath) as! GameInfoTableViewCell
         

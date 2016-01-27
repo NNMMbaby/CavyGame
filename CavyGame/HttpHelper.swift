@@ -994,6 +994,11 @@ struct RankListInfo : ResponseConvertible {
     }
     typealias Result = RankListInfo
     static func convertFromData(response: HTTPResponse!) -> (RankListInfo?) {
+        
+        if response.error != nil {
+            return nil
+        }
+        
         if nil == response.responseObject {
             return nil
         }
@@ -1439,8 +1444,8 @@ public class HttpHelper< T:ResponseConvertible>{
         
         let url = serverAddr + "appIndex/index?"
         
-        let parameters: Dictionary<String, AnyObject> = ["ac":"getclassificationmore",
-            "classid":"\(gameClassID)",
+        let parameters: Dictionary<String, AnyObject> = ["ac":"getmarkgames",
+            "mark_id":"\(gameClassID)",
             "pagenum":"\(pagenum)",
             "pagesize":"\(pagesize)"]
         
