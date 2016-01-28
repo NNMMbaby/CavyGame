@@ -8,7 +8,7 @@
         <!--找回密码-->
         <scene sceneID="HZd-xf-C3r">
             <objects>
-                <viewController storyboardIdentifier="FoundPasswdPhone" id="D09-Aq-RPz" customClass="FoundPasswdPhoneViewController" customModule="CavyGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoundPasswdPhone" id="D09-Aq-RPz" customClass="FoundPasswdPhoneViewController" customModule="SwiftCavyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NGa-tu-KG8"/>
                         <viewControllerLayoutGuide type="bottom" id="d9e-bb-xSI"/>
@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJG-gk-VkC">
-                                <rect key="frame" x="0.0" y="26" width="414" height="221.5"/>
+                                <rect key="frame" x="0.0" y="26" width="414" height="222"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-V3-N08">
-                                        <rect key="frame" x="23" y="55" width="368" height="0.5"/>
+                                        <rect key="frame" x="23" y="55" width="368" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -29,7 +29,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Bs-j0-5xG">
-                                        <rect key="frame" x="23" y="110" width="368" height="0.5"/>
+                                        <rect key="frame" x="23" y="110" width="368" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -37,7 +37,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k5Q-ul-HuI">
-                                        <rect key="frame" x="23" y="166" width="368" height="0.5"/>
+                                        <rect key="frame" x="23" y="166" width="368" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -60,7 +60,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="n6a-y2-TCO">
-                                        <rect key="frame" x="23" y="167" width="368" height="54.5"/>
+                                        <rect key="frame" x="23" y="167" width="368" height="55"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
@@ -131,10 +131,10 @@
                                     <constraint firstItem="n6a-y2-TCO" firstAttribute="leading" secondItem="QJG-gk-VkC" secondAttribute="leading" constant="23" id="ybd-gp-Zuc"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDp-B7-cXc">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDp-B7-cXc">
                                 <rect key="frame" x="27" y="281" width="360" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.33725490196078434" green="0.54117647058823526" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.39607843139999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="FrW-FM-7GH"/>
                                     <constraint firstAttribute="width" constant="360" id="xhd-Pj-kQ4"/>
@@ -146,15 +146,15 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sh7-K6-93Q">
-                                <rect key="frame" x="0.0" y="25" width="414" height="0.5"/>
+                                <rect key="frame" x="0.0" y="25" width="414" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Zur-1C-lIa"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mFb-gx-MqW">
-                                <rect key="frame" x="0.0" y="247" width="414" height="0.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mFb-gx-MqW">
+                                <rect key="frame" x="0.0" y="247" width="414" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -210,7 +210,7 @@
         <!--找回密码-->
         <scene sceneID="gox-PY-ZQy">
             <objects>
-                <viewController storyboardIdentifier="FoundPasswordEmail" id="sz6-h1-YFS" customClass="FoundPasswordEmailViewController" customModule="CavyGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoundPasswordEmail" id="sz6-h1-YFS" customClass="FoundPasswordEmailViewController" customModule="SwiftCavyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5gr-nK-39o"/>
                         <viewControllerLayoutGuide type="bottom" id="Ik6-rD-mVp"/>
@@ -220,7 +220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlF-Lm-0Iu">
-                                <rect key="frame" x="0.0" y="25" width="414" height="0.5"/>
+                                <rect key="frame" x="0.0" y="25" width="414" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -228,10 +228,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1l-2v-m84">
-                                <rect key="frame" x="0.0" y="26" width="414" height="221.5"/>
+                                <rect key="frame" x="0.0" y="26" width="414" height="222"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xkj-sK-oLd">
-                                        <rect key="frame" x="23" y="55" width="368" height="0.5"/>
+                                        <rect key="frame" x="23" y="55" width="368" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -239,7 +239,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fbs-sO-lcS">
-                                        <rect key="frame" x="23" y="166" width="368" height="0.5"/>
+                                        <rect key="frame" x="23" y="166" width="368" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -247,7 +247,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ORF-tg-tR8">
-                                        <rect key="frame" x="23" y="110" width="368" height="0.5"/>
+                                        <rect key="frame" x="23" y="110" width="368" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -269,7 +269,7 @@
                                             <constraint firstAttribute="height" constant="35" id="OPE-tc-FeX"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7E3-11-WXJ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7E3-11-WXJ">
                                         <rect key="frame" x="23" y="55" width="264" height="55"/>
                                         <animations/>
                                         <constraints>
@@ -279,7 +279,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入新密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RTZ-Bv-FGG">
-                                        <rect key="frame" x="23" y="111" width="368" height="55.5"/>
+                                        <rect key="frame" x="23" y="111" width="368" height="56"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55.5" id="W8x-eK-buy"/>
@@ -287,7 +287,7 @@
                                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xp6-zJ-pW8">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xp6-zJ-pW8">
                                         <rect key="frame" x="23" y="166" width="368" height="55"/>
                                         <animations/>
                                         <constraints>
@@ -296,7 +296,7 @@
                                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vU7-xD-FPT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vU7-xD-FPT">
                                         <rect key="frame" x="307" y="65" width="84" height="35"/>
                                         <animations/>
                                         <constraints>
@@ -339,18 +339,18 @@
                                     <constraint firstItem="jSG-w9-SxD" firstAttribute="top" secondItem="E1l-2v-m84" secondAttribute="top" id="zfl-MQ-MLd"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVP-6l-8QE">
-                                <rect key="frame" x="0.0" y="247" width="414" height="0.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CVP-6l-8QE">
+                                <rect key="frame" x="0.0" y="247" width="414" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ZgI-dr-1Te"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNx-mv-M3c">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNx-mv-M3c">
                                 <rect key="frame" x="24" y="281" width="366" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.33725490196078434" green="0.54117647058823526" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.39607843139999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1YS-Hv-RuH"/>
                                 </constraints>
