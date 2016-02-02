@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        sleep(1)    
+        
+        
         TestinAgent.init("c31d01e3fd7df3e26f48339863aa781c", channel: "1", config: TestinConfig.defaultConfig())
         // 改变 StatusBar 颜色
         application.statusBarStyle = UIStatusBarStyle.LightContent
